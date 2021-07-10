@@ -9,7 +9,7 @@ include "head.php";
 				<div id="form_wrapper" class="form card">
 				  <div class="contact-form">
 				  	<h2>Contact Us</h2>
-					    <form method="POST" action="feedback_process.php" id="frmcontact">
+					    <form method="POST" action="index.php" id="frmcontact">
 					    	<div>
 						    	<span><label>NAME</label></span><br>
 						    	<span><input type="text" name="name" id="name"value=""></span>
@@ -32,26 +32,6 @@ include "head.php";
 					    </form>
 				  </div>
   				</div>
-				
-									
-<script type="text/javascript">
-
-$(document).ready(function(){ 
-    $("#submit").click(function() { 
- 
-        $.ajax({
-        cache: false,
-        type: 'POST',
-        url: 'feedback_process.php',
-        data: $("#frmcontact").serialize(),
-        success: function(d) {
-            $("#someElement").html(d);
-        }
-        });
-    }); 
-});
-
-</script>
 				
 <?php
 include "footer.php";
