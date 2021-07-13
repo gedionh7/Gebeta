@@ -6,6 +6,7 @@
 	//start session
     session_start();
 {
+	if(isset($_POST['logmein'])){
 		// get $myusername and $mypassword
 	$email=$_POST['email'];
 	$pass=$_POST['password'];
@@ -22,7 +23,6 @@
 		$_SESSION['userid']=$row['Cust_Id'];
 	}
 
-	
     if($_SESSION['userid']!="")
     {
 	header("location: add_product.php");
@@ -32,6 +32,13 @@
 		header("location: sign.php");
 	   echo "you not logd in ";
 	}
+}elseif(isset($_POST['sinmeup'])){
+
+	//signup coustomer
+}
+else{
+	header("location: sign.php");
+}
 
 }/*
 $lis_dta = "SELECT * FROM user";

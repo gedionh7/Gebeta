@@ -28,7 +28,6 @@ include "head.php";
             echo '<div class="p_name hide"><b>'.$obj->productName.'</b>';
 			echo '<input type="hidden" name="Product_ID" value="'.$obj->Product_ID.'" />';
             echo '<input type="hidden" name="type" value="add" />';
-			echo '<input type="hidden" name="return_url" value="'.$current_url.'" />';
             echo '</form>';
             echo '</div>';
 			echo '</div>';

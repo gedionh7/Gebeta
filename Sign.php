@@ -8,27 +8,27 @@ echo '<link rel="stylesheet" href="sign.css" type="text/css" >';
 		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
 		<div class="login-form">
 			<div class="sign-in-htm">
+			<form method="post" action="userValidate.php">
 				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input">
+					<label for="user" class="label">Email</label>
+					<input id="user" name='email' type="text" class="input">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="pass" name='password' type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
-					<input id="check" type="checkbox" class="check" checked>
-					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+					<input type="submit" class="button" name="logmein" value="Sign In">
 				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Sign In">
-				</div>
+			</form>
 				<div class="hr"></div>
 				<div class="foot-lnk">
 					<a href="#forgot">Forgot Password?</a>
 				</div>
 			</div>
+
 			<div class="sign-up-htm">
+				<form method="post" action="userValidate.php">
 				<div class="group">
 					<label for="user" class="label">Username</label>
 					<input id="user" type="text" class="input">
@@ -46,12 +46,13 @@ echo '<link rel="stylesheet" href="sign.css" type="text/css" >';
 					<input id="pass" type="text" class="input">
 				</div>
 				<div class="group">
-					<input type="submit" class="button" value="Sign Up">
+					<input type="submit" class="button" name="sinmeup"value="Sign Up">
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk">
 					<label for="tab-1">Already Member?</a>
 				</div>
+			  </form>
 			</div>
 		</div>
 	</div>
