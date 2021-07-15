@@ -1,0 +1,187 @@
+
+body { 
+  background-image: url(Back.png);
+  background-attachment: fixed;
+  overflow-x: auto;
+  
+
+  ;
+}
+* {
+  box-sizing: border-box ;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+
+}
+input[type=text] , input[type=password] :focus{ 
+
+  background-color: rgb(226, 238, 241);
+}
+p
+{
+    font-size: 89%;
+    color: #f1f1f1;
+    
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: rgb(148, 148, 148);
+  outline: none;
+  text-transform: capitalize;
+  
+  
+}
+
+/* Set a style for all buttons */
+button {
+  
+  background-color: #a56d4d;
+  box-shadow: 2px 2px 4px #000000;
+
+  border-radius: 5%;
+  color: white;
+  padding: 14px 20px;
+  margin: center;
+  margin-left: 45%;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+ 
+  width: 110%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-image: "sign up img.jpg";
+  margin-right: 100%;
+  
+}
+
+/* Modal Content/Box */
+.modal-fcls {
+   
+  
+  margin: 0% auto 2% auto; 
+  border: 2mm solid rgb(112, 95, 95);
+  border-radius: 5%;
+  width: 43%; /* Could be more or less, depending on screen size */
+  height: 26cm;
+  margin-right: 55% ;
+  margin-left: auto;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+form{
+  background-image: url("sign up img.jpg");
+}
+
+
+ 
+#img1{
+    
+    height: 1cm;
+    width: 30%;
+    float: left;
+    margin-left: 46%;
+    
+    
+    
+    
+    
+
+ }
+
+ #img2{
+
+    float: right;
+    display: flex;
+    height: 1cm;
+    width: 16%;
+    vertical-align: 10%;
+    align-content: middle;
+    margin-right: 38%;
+    margin-top: 32.65%;
+    
+    
+
+ }
+
+ #img3{
+
+    float: right;
+    height: 2cm;
+    width: 13%;
+    vertical-align: 10%;
+    margin-right: -33.75%;
+    margin-top: 32.65%;
+    
+
+ }
+
+ 
+ 
