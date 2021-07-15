@@ -3,14 +3,14 @@ session_start();
 include("config.php");
 include "head.php";
 ?>
-<img  class="center-cropped img-fluid" src="../../img/photo_2021-05-15_10-39-34.jpg" alt="" />
+<img width="100%" height="377px" style="object-fit: cover;object-position: 50% 49%;" src="images/6.jpg" alt="">
 <div class="days_migb" id="products">
     <h2>Featured Products</h2>
     <div class="row">
         <div class="col-sm-5 sticky">
             <img style="float:left;width:400px; height:800; position: -webkit-sticky; position: sticky; top: 0;" class="img_tmp" src="../../img/photo_2021-05-15_10-39-34.jpg" alt="">
         </div>
-        <div class="col-sm-7">
+        <div class="col-sm-7" style="float:right;">
             <?php
 	
 	$results = $mysqli->query("SELECT * FROM product ORDER BY Product_ID ASC ");
@@ -36,9 +36,6 @@ include "head.php";
     
     }
     ?>
-        </div>
-    </div>
-</div>
 <?php
 		include "footer.php";
 		?>

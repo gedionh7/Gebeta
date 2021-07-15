@@ -1,7 +1,7 @@
 <div class="row footer">
       <div class="col" >
 	  <h2>About ገበታ</h2>
-	 <img src="images/gebeta_logo.jpg" alt="ገበታ" width="160" height="80"/>
+	 <img src="images/Logo.png" alt="ገበታ"  width="160" height="109"/>
 	<p>ገበታ ለሃገር ያደረገው ማነው ገበታ ለሰው ልጅ ፡ ገበታ ለኔ ነው ፡ ለኔ ነው ? 
 							
 	</div>
@@ -18,18 +18,18 @@
 	  <h2>Information</h2>
 		<ul>
 			<li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
-			<li><a href="#" title="Contact Us">Contact Us</a></li>
-			<li><a href="#" title="Log In">Log In</a></li>
-			<li><a href="#" title="Account">Account</a></li>
+			<li><a href="contact.php" title="Contact Us">Contact Us</a></li>
+			<li><a href="sign.php?sign=2" title="Log In">Log In</a></li>
+			<li><a href="sign.php?sign=1" title="Account">Account</a></li>
 		</ul>
 	  </div>
       <div class="col" >
 	  <h2>Categories</h2>
 						<ul>
-							<li><a href="#" title="Clothes">Clothes</a></li>
-							<li><a href="#" title="Cleaning Material">Cleaning Material</a></li>
-							<li><a href="#" title="Fizzi Drinks">Fizzy Drinks</a></li>
-							<li><a href="#" title="Food Stuff">Food Stuff</a></li>
+							<li><a href="#" title="Hotels">Hotels</a></li>
+							<li><a href="#" title="placess">placess</a></li>
+							<li><a href="#" title=" Drinks"> Drinks</a></li>
+							<li><a href="#" title="Food Stuff">Food catagorys</a></li>
 						</ul></div>
     </div>
 	

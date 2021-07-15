@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
-<body>
+<body background=Back.png >
 	<div class="container-fluid">
 
 		<nav class="navbar navbar-expand-lg navbar-light nav_et">
@@ -40,8 +40,7 @@
               echo '<li class="nav-item"> <a style="color: #f6d19c; font-size:25px;" class="nav-link" href="logout.php">LogOut</a></li>';
             }else
             {
-              echo '<li class="nav-item"><a style="color: #f6d19c; font-size:25px;" class="nav-link" href="sign.php">Free Sign Up</a> </li>
-              <li class="nav-item"><a style="color: #f6d19c; font-size:25px;" class="nav-link" href="sign.php" title="Sign In"><span>Sign In</span></a></li>
+              echo '<li class="nav-item"><a style="color: #f6d19c; font-size:25px;" class="nav-link" href="sign.php" title="Sign In"><span>Sign In</span></a></li>
               ';
             }
 

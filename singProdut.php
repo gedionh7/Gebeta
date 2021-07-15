@@ -28,9 +28,9 @@ include "head.php";
         //fetch results set as object and output HTML
         while($obj = $results->fetch_object())
         { 
-			
-			echo $obj->FullName;
-            echo $obj->UserName;
+			echo "<br><br><br>";
+			echo $obj->vndrName;
+            echo $obj->mgrName;
             echo $obj->Phone;
             echo $obj->Email;
             echo $obj->Country;

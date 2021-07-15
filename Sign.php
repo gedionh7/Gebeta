@@ -2,61 +2,35 @@
 include "head.php";
 echo '<link rel="stylesheet" href="sign.css" type="text/css" >';
 ?>
-<div class="login-wrap">
-	<div class="login-html">
-		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-		<div class="login-form">
-			<div class="sign-in-htm">
-			<form method="post" action="userValidate.php">
-				<div class="group">
-					<label for="user" class="label">Email</label>
-					<input id="user" name='email' type="text" class="input">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" name='password' type="password" class="input" data-type="password">
-				</div>
-				<div class="group">
-					<input type="submit" class="button" name="logmein" value="Sign In">
-				</div>
-			</form>
-				<div class="hr"></div>
-				<div class="foot-lnk">
-					<a href="#forgot">Forgot Password?</a>
-				</div>
-			</div>
+<br><br><br><br>
 
-			<div class="sign-up-htm">
-				<form method="post" action="userValidate.php">
-				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Repeat Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Email Address</label>
-					<input id="pass" type="text" class="input">
-				</div>
-				<div class="group">
-					<input type="submit" class="button" name="sinmeup"value="Sign Up">
-				</div>
-				<div class="hr"></div>
-				<div class="foot-lnk">
-					<label for="tab-1">Already Member?</a>
-				</div>
-			  </form>
-			</div>
-		</div>
+
+ <div class="row">
+    <div class="col">
+	<?php
+		if(isset($_GET['sign'])){
+			if($_GET['sign']==1){
+				include 'signup.php';
+			}else{
+				include 'signin.php';
+			}
+		}
+?>
 	</div>
-</div>
+    <div class="col">
+	<div >
+	<img id="img1" src="sample.jpg" alt="" style="width:650px;height:500px; ">
+  </div>
+
+  <div >
+	<img id="img2" src="sample1.png" alt="" style="width:300px;height:465px;">
+	<img id="img3"  src="sample3.png" alt="" style="width:345px;height:465px; ">
+  </div>
+
+	</div>
+  </div>
+  
+	 <div class="clearfix"></div>
 <?php
 include "footer.php";
 ?>

@@ -1,42 +1,24 @@
 <?php
-
-include("csession.php");
+include("session.php");
 include("config.php");
 include "head.php";
 ?>
 
-<!-- End Navigation -->
-
-<!-- Begin Main -->
-<div id="main" class="shell">
-
-    <br> <br>
-    <!-- Begin Content -->
-    <div id="content">
-        <div class="post">
-
-
-            <div class="cl">&nbsp;</div>
-        </div>
-    </div>
-    <!-- End Content -->
-    <!-- Begin Sidebar -->
-    <div id="sidebar">
         <ul>
             <li class="widget">
                 <h2>Customer Information</h2>
-                <div class="brands">
-                    <div id="form_wrapper" class="form_wrapper">
-                        <?php  
-		$id = $_SESSION['userid'];
-		$query = mysqli_query($mysqli,"SELECT * FROM customer WHERE Email = '$id'") or die (mysqli_error()); 
+                        <?php 
+                        if(isset($_SESSION['userid'])){
+                             $id = $_SESSION['userid'];
+                        }
+		           
+		$query = mysqli_query($mysqli,"SELECT * FROM customer WHERE Cust_Id = '$id' ") or die (mysqli_error()); 
 		$result = mysqli_fetch_array($query);	
-														?>
+				?>
                         <table>
-                            <form class="register active" action="custUpdate.php" method="POST" autocomplete="off">
+                            <form class="register active" action="profile.php" method="POST" >
                                 <tr>
-
-                                    <td><input name="username" type="hidden" id="namebox"
+                <td><input name="username" type="hidden" id="namebox"
                                             value="<?php echo $result['Cust_Id']?>" /></td>
                                 </tr>
                                 <tr>
@@ -98,54 +80,7 @@ include "head.php";
             </li>
         </ul>
     </div>
-    <!-- End Sidebar -->
-    <div class="cl">&nbsp;</div>
-
-
-
-
-    <!-- Begin Products Slider -->
-    <div id="product-slider">
-        <h2>Best Products</h2>
-        <ul>
-
-            <?php
-			$result=mysqli_query($mysqli,"select * from product") or die (mysqli_error());
-			while($row=mysqli_fetch_array($result)){
-		?>
-            <li>
-                <a href="products.php" title="Product Link"><img src="images/<?php echo $row['Picture']?>"
-                        alt="IMAGES" /></a>
-                <div class="info">
-                    <h4><b><?php echo $row['productName']?></b></h4>
-                    <span class="number"><span>Price:<big
-                                style="color:green">$<?php echo $row['Price']?></big></span></span>
-
-                    <div class="cl">&nbsp;</div>
-
-                </div>
-            </li>
-            <?php } ?>
-        </ul>
-        <div class="cl">&nbsp;</div>
-    </div>
-    <!-- End Products Slider -->
-
-
-    <?php
-   $ids = $_SESSION['login_username'];
-		$qry = mysqli_query($mysqli,"SELECT * FROM customer WHERE Email = '$ids'") or die (mysqli_error()); 
-							
+    
+<?php
+include "footer.php";
 ?>
-
-
-
-
-</div>
-<!-- End Main -->
-
-</div>
-<!-- End Wrapper -->
-</body>
-
-</html>

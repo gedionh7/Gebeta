@@ -21,6 +21,7 @@
 	$lsd = $mysqli->query($lis_dta);
 	while($row =$lsd->fetch_assoc()){
 		$_SESSION['userid']=$row['Cust_Id'];
+		$_SESSION['vndrName']=$row['vndrName'];
 	}
 
     if($_SESSION['userid']!="")
@@ -32,12 +33,42 @@
 		header("location: sign.php");
 	   echo "you not logd in ";
 	}
-}elseif(isset($_POST['sinmeup'])){
+}
+if(isset($_POST['sinmeup'])){
+
+
 
 	//signup coustomer
+	if($_POST['passw'] == $_POST['repassw']){
+		$passw = $_POST['passw'];
+		}
+		else
+		{
+			header("location: sign.php?msg=password");
+		}
+		
+		echo "$_POST[vndrName]
+$_POST[mgrName]
+$_POST[Phone]
+$_POST[email]
+$passw
+$_POST[Ctry]
+$_POST[ct]
+$_POST[Adress]
+$_POST[pcod]
+$_POST[map]";
+	$sql="INSERT INTO customer (vndrName,mgrName,Phone,Email,Password,Country,City,Adress,PostalCode,map) 
+
+VALUES ('$_POST[vndrName]', '$_POST[mgrName]', '$_POST[Phone]','$_POST[email]',  '$passw', '$_POST[Ctry]', '$_POST[ct]', '$_POST[Adress]', '$_POST[pcod]','$_POST[map]')";
+
+if (!mysqli_query($mysqli,$sql))
+  {
+  die('Error: ' . mysqli_error($mysqli));
+  }
 }
 else{
-	header("location: sign.php");
+
+	//header("location: sign.php");
 }
 
 }/*
