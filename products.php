@@ -34,7 +34,7 @@ include "head.php";
 			echo '</div>';
 			echo '</div>';  
 
-                echo "<button onclick=";echo "sendOrder(";echo "' $obj->productName'";echo ")>Ordering</button>"; 
+                echo "<button onclick=";echo "sendOrder(";echo "'.$obj->productName.'";echo ")>Ordering</button>"; 
         
             }
             }
